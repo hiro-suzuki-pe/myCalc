@@ -11,21 +11,29 @@ namespace myCalc.ViewModels
     public class MyCalcViewModel : INotifyPropertyChanged 
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public Calculator Calculator { get; set; }
+        public Calculator calculator { get; set; }
 
-        public keyInCommand keyInCommand { get; private set; }
+        public KeyInCommand keyInCommand { get; private set; }
 
         public MyCalcViewModel()
         {
             keyInCommand = new KeyInCommand(this);
-            Calculator = new Calculator();
+            calculator = new Calculator();
         }
 
-        public String calcResult
+        public String CalcResult
         {
             get
             {
-                return my
+                return calculator.CalcResult;
+            }
+            set
+            {
+                calculator.CalcResult = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("CalcResult"));
+                }
             }
         }
     }

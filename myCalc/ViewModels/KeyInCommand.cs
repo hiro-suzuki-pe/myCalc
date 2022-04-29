@@ -7,9 +7,10 @@ using System.Windows.Input;
 
 namespace myCalc.ViewModels
 {
-    class KeyInCommand: ICommand
+    public class KeyInCommand: ICommand
     {
         private MyCalcViewModel _view { get; set; }
+
         public KeyInCommand(MyCalcViewModel view)
         {
             _view = view;
@@ -25,7 +26,7 @@ namespace myCalc.ViewModels
         }
         public void Execute(object parameter)
         {
-            _view.calcResult += parameter;
+            _view.CalcResult += parameter;
         }
     }
 

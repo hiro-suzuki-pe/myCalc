@@ -1,0 +1,16 @@
+﻿################################################################################
+# この .gitignore ファイルは Microsoft(R) Visual Studio によって自動的に作成されました。
+################################################################################
+
+/myCalc/obj/Debug/net5.0-windows/ref/myCalc.dll
+/myCalc/obj/Debug/net5.0-windows/apphost.exe
+/myCalc/bin/Debug/net5.0-windows/myCalc.pdb
+/myCalc/bin/Debug/net5.0-windows/myCalc.exe
+/myCalc/bin/Debug/net5.0-windows/ref/myCalc.dll
+/myCalc/bin/Debug/net5.0-windows/myCalc.deps.json
+*.dll
+/myCalc/bin/Debug/net5.0-windows/myCalc.runtimeconfig.dev.json
+/myCalc/bin/Debug/net5.0-windows/myCalc.runtimeconfig.json
+/myCalc/obj/Debug/net5.0-windows/MainWindow.baml
+/myCalc/obj/Debug/net5.0-windows/myCalc.csproj.CoreCompileInputs.cache
+/myCalc/obj/Debug/net5.0-windows/myCalc.g.resources

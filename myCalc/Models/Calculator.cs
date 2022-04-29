@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace myCalc.Models
 {
-    class Calculator
+    public class Calculator
     {
-        public string Result { get; set; } = "";
+        public string CalcResult { get; set; } = "";
 
         public Calculator() 
         {
+            
         }
 
         public int add(int a, int b)
