@@ -1,0 +1,15 @@
+E:\zeus\myCalc\myCounter\obj\Debug\MainWindow.g.cs
+E:\zeus\myCalc\myCounter\obj\Debug\App.g.cs
+E:\zeus\myCalc\myCounter\obj\Debug\myCounter_MarkupCompile.cache
+E:\zeus\myCalc\myCounter\obj\Debug\myCounter_MarkupCompile.lref
+E:\zeus\myCalc\myCounter\bin\Debug\myCounter.exe.config
+E:\zeus\myCalc\myCounter\bin\Debug\myCounter.exe
+E:\zeus\myCalc\myCounter\bin\Debug\myCounter.pdb
+E:\zeus\myCalc\myCounter\obj\Debug\MainWindow.baml
+E:\zeus\myCalc\myCounter\obj\Debug\myCounter.g.resources
+E:\zeus\myCalc\myCounter\obj\Debug\myCounter.Properties.Resources.resources
+E:\zeus\myCalc\myCounter\obj\Debug\myCounter.csproj.GenerateResource.cache
+E:\zeus\myCalc\myCounter\obj\Debug\myCounter.csproj.CoreCompileInputs.cache
+E:\zeus\myCalc\myCounter\obj\Debug\myCounter.exe
+E:\zeus\myCalc\myCounter\obj\Debug\myCounter.pdb
+E:\zeus\myCalc\myCounter\obj\Debug\GeneratedInternalTypeHelper.g.cs
