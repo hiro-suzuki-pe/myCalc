@@ -8,9 +8,9 @@ using myCounter.Models;
 
 namespace myCounter.ViewModels
 {
-    public class CounterViewModel
+    public class CounterViewModel: INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler propertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public Counter counter { get; set; }
         public CountDownCommand countDownCommand { get; private set; }
@@ -31,9 +31,9 @@ namespace myCounter.ViewModels
             {
                 counter.Value = value;
 
-                if (propertyChanged != null)
+                if (PropertyChanged != null)
                 {
-                    propertyChanged(this, new PropertyChangedEventArgs("Value"));
+                    PropertyChanged(this, new PropertyChangedEventArgs("Value"));
                 }
             }
         }
