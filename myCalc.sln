@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myCalc", "myCalc\myCalc.csproj", "{3E1154E0-CD24-4347-A9D4-CA9D0FAAEE34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "myCalc", "myCalc\myCalc.csproj", "{3E1154E0-CD24-4347-A9D4-CA9D0FAAEE34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myCounter", "myCounter\myCounter.csproj", "{32F7ECF4-2A4B-479E-8380-3A2FAEDB6B75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3E1154E0-CD24-4347-A9D4-CA9D0FAAEE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E1154E0-CD24-4347-A9D4-CA9D0FAAEE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E1154E0-CD24-4347-A9D4-CA9D0FAAEE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F7ECF4-2A4B-479E-8380-3A2FAEDB6B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F7ECF4-2A4B-479E-8380-3A2FAEDB6B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F7ECF4-2A4B-479E-8380-3A2FAEDB6B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F7ECF4-2A4B-479E-8380-3A2FAEDB6B75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
