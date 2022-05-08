@@ -6,22 +6,27 @@
         xmlns:local="clr-namespace:myCounter"
         xmlns:ViewModels="clr-namespace:myCounter.ViewModels" x:Class="myCounter.MainWindow"
         mc:Ignorable="d"
-        Title="myCounter" Height="450" Width="800">
+        Title="myCounter" Height="122" Width="396">
     <Window.DataContext>
         <!--
         <local:CounterViewModel/>
         -->
         <ViewModels:CounterViewModel/>
     </Window.DataContext>
-    <Grid>
+    <Grid Margin="20,0,0,0" Height="68" VerticalAlignment="Center" HorizontalAlignment="Left" Width="351">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
         <!--
         <Button Content="カウントダウン" HorizontalAlignment="Left" Height="21" Margin="213,141,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click" Command="{Binding countDownCommand, Mode=OneWay}"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="74,51,0,0" TextWrapping="Wrap" 
                  Text="{Binding Value}" VerticalAlignment="Top" Width="139"/>
         -->
-        <Button Content="カウントダウン" HorizontalAlignment="Left" Height="21" Margin="213,141,0,0" VerticalAlignment="Top" Width="80"  Command="{Binding countDownCommand, Mode=OneWay}"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="98,141,0,0" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="97" TextChanged="TextBox_TextChanged"/>
-        <Button Content="カウントアップ" HorizontalAlignment="Left" Height="21" Margin="298,141,0,0" VerticalAlignment="Top" Width="80"  Command="{Binding countUpCommand, Mode=OneWay}"/>
+        <Button Content="カウントダウン" HorizontalAlignment="Left" Height="22" Margin="16,26,0,0" VerticalAlignment="Top" Width="80"  Command="{Binding countDownCommand, Mode=OneWay}" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="27,26,0,0" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="97" TextChanged="TextBox_TextChanged"/>
+        <Button Content="カウントアップ" HorizontalAlignment="Left" Height="22" Margin="101,26,0,0" VerticalAlignment="Top" Width="80"  Command="{Binding countUpCommand, Mode=OneWay}" Grid.Column="1"/>
 
     </Grid>
 </Window>
