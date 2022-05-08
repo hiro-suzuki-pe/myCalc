@@ -6,41 +6,44 @@
         xmlns:local="clr-namespace:myCalc"
         xmlns:ViewModels="clr-namespace:myCalc.ViewModels" x:Class="myCalc.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="346" Width="225">
-    <Grid Background="White" Margin="0,0,0,54" HorizontalAlignment="Left" Width="219">
-        <Button x:Name="Key_1" Content="1" HorizontalAlignment="Left" Height="28" Margin="24,192,0,0" VerticalAlignment="Top" Width="38" Background="White" Command="{Binding keyInCommand, Mode=OneWay}">
-            <Button.DataContext>
-                <ViewModels:MyCalcViewModel CalcResult="&quot;1&quot;"/>
-            </Button.DataContext>
-        </Button>
-        <Button x:Name="Key_2" Content="2" HorizontalAlignment="Left" Height="28" Margin="67,192,0,0" VerticalAlignment="Top" Width="38" Background="White" Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="{Binding keyInCommand, Mode=OneWay}">
-            <Button.DataContext>
-                <ViewModels:MyCalcViewModel CalcResult="&quot;2&quot;"/>
-            </Button.DataContext>
-        </Button>
-        <Button x:Name="Key_3" Content="3" HorizontalAlignment="Left" Height="28" Margin="108,192,0,0" VerticalAlignment="Top" Width="38" Background="White"/>
-        <Button Content="+" HorizontalAlignment="Left" Height="28" Margin="151,192,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button Content="+/-" HorizontalAlignment="Left" Height="28" Margin="24,225,0,0" VerticalAlignment="Top" Width="38" IsEnabled="False" Background="White"/>
-        <Button x:Name="Key_0" Content="0" HorizontalAlignment="Left" Height="28" Margin="67,225,0,0" VerticalAlignment="Top" Width="38" Background="White"/>
-        <Button x:Name="Key_FPoint" Content="." HorizontalAlignment="Left" Height="28" Margin="108,225,0,0" VerticalAlignment="Top" Width="38" Background="White"/>
-        <Button Content="=" HorizontalAlignment="Left" Height="28" Margin="151,225,0,0" VerticalAlignment="Top" Width="38" Background="#FF0080FF" Foreground="White"/>
-        <Button x:Name="Key_7" Content="7" HorizontalAlignment="Left" Height="28" Margin="24,127,0,0" VerticalAlignment="Top" Width="38" Background="White"/>
-        <Button x:Name="Key_8" Content="8" HorizontalAlignment="Left" Height="28" Margin="67,127,0,0" VerticalAlignment="Top" Width="38" Background="White"/>
-        <Button x:Name="Key_9" Content="9" HorizontalAlignment="Left" Height="28" Margin="108,127,0,0" VerticalAlignment="Top" Width="38" Background="White"/>
-        <Button Content="×" HorizontalAlignment="Left" Height="28" Margin="151,127,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button x:Name="Key_4" Content="4" HorizontalAlignment="Left" Height="28" Margin="24,160,0,0" VerticalAlignment="Top" Width="38" Background="White"/>
-        <Button x:Name="Key_5" Content="5" HorizontalAlignment="Left" Height="28" Margin="67,160,0,0" VerticalAlignment="Top" Width="38" Background="White"/>
-        <Button x:Name="Key_6" Content="6" HorizontalAlignment="Left" Height="28" Margin="108,160,0,0" VerticalAlignment="Top" Width="38" Background="White"/>
-        <Button Content="-" HorizontalAlignment="Left" Height="28" Margin="151,160,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button Content="%" HorizontalAlignment="Left" Height="28" Margin="24,62,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button Content="CE" HorizontalAlignment="Left" Height="28" Margin="67,62,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button Content="C" HorizontalAlignment="Left" Height="28" Margin="108,62,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button Content="&lt;del" HorizontalAlignment="Left" Height="28" Margin="151,62,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button Content="1/x" HorizontalAlignment="Left" Height="28" Margin="24,95,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button Content="x**2" HorizontalAlignment="Left" Height="28" Margin="67,95,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button Content="√x" HorizontalAlignment="Left" Height="28" Margin="108,95,0,0" VerticalAlignment="Top" Width="38"/>
-        <Button Content="÷" HorizontalAlignment="Left" Height="28" Margin="151,95,0,0" VerticalAlignment="Top" Width="38"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="24,26,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        Title="MainWindow" Height="342" Width="305">
+    <Grid Background="White" HorizontalAlignment="Left" Width="219" Height="260" VerticalAlignment="Top">
+        <Grid.DataContext>
+            <ViewModels:MyCalcViewModel/>
+        </Grid.DataContext>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="163*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Key_1" Content="1" HorizontalAlignment="Left" Height="28" Margin="24,192,0,0" VerticalAlignment="Top" Width="38" Background="White" 
+                Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="1" Click="Key_1_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="Key_2" Content="2" HorizontalAlignment="Left" Height="28" Margin="11,192,0,0" VerticalAlignment="Top" Width="38" Background="White" 
+                Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="2" Grid.Column="1"/>
+        <Button Content="+" HorizontalAlignment="Left" Height="28" Margin="95,192,0,0" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <Button Content="+/-" HorizontalAlignment="Left" Height="28" Margin="24,225,0,0" VerticalAlignment="Top" Width="38" IsEnabled="False" Background="White" Grid.ColumnSpan="2"/>
+        <Button x:Name="Key_0" Content="0" HorizontalAlignment="Left" Height="28" Margin="11,225,0,0" VerticalAlignment="Top" Width="38" Background="White" Grid.Column="1" Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="0"/>
+        <Button x:Name="Key_FPoint" Content="." HorizontalAlignment="Left" Height="28" Margin="52,225,0,0" VerticalAlignment="Top" Width="38" Background="White" Grid.Column="1"/>
+        <Button Content="=" HorizontalAlignment="Left" Height="28" Margin="95,225,0,0" VerticalAlignment="Top" Width="38" Background="#FF0080FF" Foreground="White" Grid.Column="1"/>
+        <Button x:Name="Key_7" Content="7" HorizontalAlignment="Left" Height="28" Margin="24,127,0,0" VerticalAlignment="Top" Width="38" Background="White" Grid.ColumnSpan="2" Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="7"/>
+        <Button x:Name="Key_8" Content="8" HorizontalAlignment="Left" Height="28" Margin="11,127,0,0" VerticalAlignment="Top" Width="38" Background="White" Grid.Column="1" Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="8"/>
+        <Button x:Name="Key_9" Content="9" HorizontalAlignment="Left" Height="28" Margin="52,127,0,0" VerticalAlignment="Top" Width="38" Background="White" Grid.Column="1" Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="9"/>
+        <Button Content="×" HorizontalAlignment="Left" Height="28" Margin="95,127,0,0" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <Button x:Name="Key_4" Content="4" HorizontalAlignment="Left" Height="28" Margin="24,160,0,0" VerticalAlignment="Top" Width="38" Background="White" Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="4" Grid.ColumnSpan="2"/>
+        <Button x:Name="Key_5" Content="5" HorizontalAlignment="Left" Height="28" Margin="11,160,0,0" VerticalAlignment="Top" Width="38" Background="White" Grid.Column="1" CommandParameter="5" Command="{Binding keyInCommand, Mode=OneWay}"/>
+        <Button x:Name="Key_6" Content="6" HorizontalAlignment="Left" Height="28" Margin="52,160,0,0" VerticalAlignment="Top" Width="38" Background="White" Grid.Column="1" Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="6"/>
+        <Button Content="-" HorizontalAlignment="Left" Height="28" Margin="95,160,0,0" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <Button Content="%" HorizontalAlignment="Left" Height="28" Margin="24,62,0,0" VerticalAlignment="Top" Width="38" Grid.ColumnSpan="2"/>
+        <Button Content="CE" HorizontalAlignment="Left" Height="28" Margin="11,62,0,0" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <Button Content="C" HorizontalAlignment="Left" Height="28" Margin="52,62,0,0" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <Button Content="&lt;del" HorizontalAlignment="Left" Height="28" Margin="95,62,0,0" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <Button Content="1/x" HorizontalAlignment="Left" Height="28" Margin="24,95,0,0" VerticalAlignment="Top" Width="38" Grid.ColumnSpan="2"/>
+        <Button Content="x**2" HorizontalAlignment="Left" Height="28" Margin="11,95,0,0" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <Button Content="√x" HorizontalAlignment="Left" Height="28" Margin="52,95,0,0" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <Button Content="÷" HorizontalAlignment="Left" Height="28" Margin="95,95,0,0" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="24,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" SnapsToDevicePixels="True" 
+                   Text="{Binding CalcResult}" Grid.ColumnSpan="2"/>
+        <Button x:Name="Key_2_Copy" Content="3" HorizontalAlignment="Left" Height="28" Margin="52,192,0,0" VerticalAlignment="Top" Width="38" Background="White" 
+            Command="{Binding keyInCommand, Mode=OneWay}" CommandParameter="3" Grid.Column="1"/>
 
     </Grid>
 </Window>

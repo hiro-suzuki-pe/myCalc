@@ -24,5 +24,10 @@ namespace myCalc
         {
             InitializeComponent();
         }
+
+        private void Key_1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
