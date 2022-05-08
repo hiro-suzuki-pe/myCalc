@@ -21,6 +21,7 @@
         -->
         <Button Content="カウントダウン" HorizontalAlignment="Left" Height="21" Margin="213,141,0,0" VerticalAlignment="Top" Width="80"  Command="{Binding countDownCommand, Mode=OneWay}"/>
         <TextBox HorizontalAlignment="Left" Height="21" Margin="98,141,0,0" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="97" TextChanged="TextBox_TextChanged"/>
+        <Button Content="カウントアップ" HorizontalAlignment="Left" Height="21" Margin="298,141,0,0" VerticalAlignment="Top" Width="80"  Command="{Binding countUpCommand, Mode=OneWay}"/>
 
     </Grid>
 </Window>

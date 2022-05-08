@@ -14,10 +14,12 @@ namespace myCounter.ViewModels
 
         public Counter counter { get; set; }
         public CountDownCommand countDownCommand { get; private set; }
+        public CountUpCommand countUpCommand { get; private set; }
 
         public CounterViewModel()
         {
             countDownCommand = new CountDownCommand(this);
+            countUpCommand = new CountUpCommand(this);
             counter = new Counter();
         }
 

@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\CountUpCommand.cs" />
     <Compile Include="ViewModels\CountDownCommand.cs" />
     <Compile Include="ViewModels\CounterViewModel.cs" />
     <Page Include="MainWindow.xaml">
